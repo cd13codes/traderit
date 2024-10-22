@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeRit Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('pic.jpg');
+            background-size: cover;
+            backdrop-filter: blur(5px);
+            color: white;
+        }
+
+        form {
+            max-width: 700px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            border-radius: 100px;
+            background-color: rgb(4, 4, 61);
+            color: white;
+            border: none;
+            height: 50px;
+            font-size: 20px;
+            width: 200px;
+        }
+
+        button:hover {
+            background-color: rgb(212, 65, 11);
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 30px;
+            background-color: rgb(4, 4, 61);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>TradeRit Feedback</h2>
+
+    <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">USN:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="feedbackType">Feedback Type:</label>
+        <select id="feedbackType" name="feedbackType" required>
+            <option value="bug">Bug Report</option>
+            <option value="feature">Feature Request</option>
+            <option value="general">General Feedback</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="15" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#feedbackF`orm').on('submit', function(event) {
+                event.preventDefault();
+
+                // Perform form validation
+                let isValid = true;
+                $('#feedbackForm input, #feedbackForm select, #feedbackForm textarea').each(function() {
+                    if ($(this).val() === '') {
+                        isValid = false;
+                        $(this).css('border', '2px solid red');
+                    } else {
+                        $(this).css('border', '');
+                    }
+                });
+
+                if (isValid) {
+                    // Form is valid, simulate successful form submission
+                    window.location.href = 'thanku.html';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

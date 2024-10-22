@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<body>
+    <form id="myform">
+        <label for="username">username:</label>:
+        <input type="text" id="username" name="username">
+        <label for="password">password:</label>:
+        <input type="password" id="password" name="password">
+        <button type="submit">submit</button>
+    </form>
+</body>
+<script>
+    $('#myform').on('submit',function(event) {
+        var user=$("#username").val();
+        var pass=$("#password").val();
+        if (user === '' || pass===  ''){
+            alert('enter valid values ');
+            event.preventDefault();
+        }
+
+    });
+    $("#username").on('focus',function(){
+        $(this).css('backgroundColor','coral');
+    })
+
+</script>
+</html>

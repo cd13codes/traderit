@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sell</title>
+    <style>
+        #image {
+         width: 200px;
+            height: 200px;
+           display: inline;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            display: inline;
+            background-image:url('pic.jpg');
+            background-size:cover;
+           
+        
+            
+        }
+        .tup
+        {
+            text-align: center;
+            color: #ccc;
+            background-color: rgb(4,4,61);
+            font-size: 75px;
+        }
+        h2{
+            text-align: justify;
+            color: #ccc;
+            background-color: rgb(4,4,61);
+            font-size: 50px;
+            width:300px;
+        }
+        h3{
+            text-align: justify;
+            color: #ccc;
+            background-color: rgb(4,4,61);
+            font-size: 50px;
+            width:570px;
+        }
+        button:hover{
+        background-color: rgb(212, 65, 11);
+        cursor:pointer;
+        border-color: rgb(212, 65, 11);}
+
+        button{
+            border-radius: 100px;
+            background-color:rgb(4, 4, 61) ;
+            color:white;
+            border-color:rgb(4, 4, 61);
+            height: 50px;
+            padding: auto;
+            font-size:25px;
+            width:145px;
+            border-color:rgb(4, 4, 61) ;}
+        h4{
+            color:#ccc;
+            font-size: x-large;
+            background-color: rgb(4, 4, 61);
+            width: 100px;
+            backdrop-filter: blur(2px);
+            
+            
+        }
+        p{
+            color:#ccc;
+            font-size: large;
+           
+            width: 200px;
+            backdrop-filter: blur(2px);
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="tup">Sell</h1>
+    </header>
+
+    <main>
+        <section id="listings">
+            <h2>Added items</h2>
+            <div id="listing-container">
+                <!-- Listing items will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="create-listing">
+            <h3>Enter the item details</h3>
+            <form id="listing-form">
+                <input type="file" id="image" accept="image/*"style="font-size:25px">
+                <input type="text" id="title" placeholder="Title"  style="font-size: 25px" >
+                <input type="text" id="description" placeholder="Description"style="font-size:25px">
+                <input type="number" id="price" placeholder="Price"style="font-size:25px">
+               
+                <button type="button" id="submit-listing">SUBMIT </button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

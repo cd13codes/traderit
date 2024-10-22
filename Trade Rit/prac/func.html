@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideToggle Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #content {
+            display: none; /* Initially hidden */
+            background-color: lightblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Toggle Content</button>
+    <button id="DownButton">DownButton</button>
+    <button id="UpButton">UpButton</button>
+    <button id="animate">animate</button>
+
+    <div id="content">
+        "Sai Naga Venkata Chirudeep Kuralla"
+    </div>
+    
+    <script>
+        $('#toggleButton').on('click', function() {
+            $('#content').slideToggle();});
+        $("#DownButton").on('click',function(){
+            $("#content").slideDown();});
+        $("#UpButton").on('click',function(){
+            $("#content").slideUp();
+            
+        });
+        $("#animate").on('click',function(){
+            $("#content").css( 'background-color', 'coral').slideUp(500).slideDown(300).slideUp(500).slideDown(300).slideUp(500).slideDown(300).slideUp(500).slideDown(300).slideUp(500).slideDown(300).fadeIn().fadeOut().fadeToggle().animate({width:'500px',
+                height:'200px',
+                
+                },1000,'swing',function(){
+                    alert('animation complete');
+                }).animate({width:'500px',
+                height:'1000px',
+                
+                },1000,'swing',function(){
+                    alert('animation 2 also completed');
+                }).animate({width:'500px',
+                height:'200px',
+                
+                },1000,'swing',function(){
+                   $("#content").css('backgroundColor','blue',function(){
+                    $("#content").css('backgroundColor','green');
+                   });
+                });
+            });
+        
+        
+
+       
+    </script>
+</body>
+</html>

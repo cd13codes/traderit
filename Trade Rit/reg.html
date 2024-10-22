@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body{
+        background-image:url('pic.jpg');
+        background-size:cover;
+        
+       
+    } 
+     
+     #registrationForm{
+         
+         font-size:50px;
+         color:rgb(255, 255, 255);
+         margin-top: 100px;
+         margin-left: 600px;
+         margin-right: 600px;
+         padding-top: 20px;
+         backdrop-filter:blur(4px);
+     }
+     h1{
+        background-color:rgb(4, 4, 61);
+        color:rgb(255, 255, 255);
+        font-size:80px;
+        width:800px;
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        margin-top: 200px;}
+     button{
+            border-radius: 100px;
+            background-color:rgb(4, 4, 61) ;
+            color:white;
+            border-color:rgb(4, 4, 61);
+            height: 77px;
+            padding: auto;
+            font-size:25px;
+            width:145px;
+            border-color:rgb(4, 4, 61) ;}
+    div{
+        text-align: center;
+        margin-top: 30px;
+        font: size 50px;
+    }
+    button:hover{
+        background-color: rgb(212, 65, 11);
+        cursor:pointer;
+        border-color: rgb(212, 65, 11);
+
+      }     
+    .img{
+        filter:blur(8px) ;
+        background-image:url('pic.jpg');
+        background-size:cover;
+    }
+      
+    </style>
+</head>
+<body>
+    <div class="img"></div>
+    <h1>Registration Form</h1>
+    <form id="registrationForm"><center><table>
+      <b> <tr>
+            <td>
+        <label for="username"><b>Username:</b></label> 
+        </td>
+        <td>
+        <input type="text" id="username" required style="font-size:22px;">
+        </td>
+       </tr> 
+
+        <tr>
+            <td>
+                <label for="usn"><b>usn:</b></label> 
+        </td>
+        <td>
+            <input type="text" id="usn" required style="font-size:22px;" >
+        </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="password"><b>Password:</b></label> 
+        </td>
+        <td>
+            <input type="password" id="password" required style="font-size:22px;">
+        </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for=" confirm password"><b> confirm Password:</b></label>
+        </td>
+        <td>
+            <input type="password" id="cpassword" required style="font-size:22px;">
+        </td>
+        </tr></b> 
+
+       </table></center>
+    </form>
+<script src="reg.js"></script>
+
+<div>
+     <button type="button" onclick="registerUser()">REGISTER </button> </div>
+
+   
+</body>
+</html>
